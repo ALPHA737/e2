@@ -1,0 +1,14 @@
+@persist Vec:vector Ent:entity
+
+if(first()|duped(){
+  findbymodel("")
+  Ent = findResult(1)
+  }
+  
+  interval(10)
+  
+  Vec = (owner():pos()-Ent:pos()+vec(120*cos(X),120*sin(X),120))*10
+  
+  Ent:applyForce(Vec+$Vec*5)
+  X++
+  
